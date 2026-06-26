@@ -1,0 +1,25 @@
+{
+  "name": "dailywell-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Full-stack monorepo for the DailyWell Tracker wellness app.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n client,server -c cyan,magenta \"npm run dev -w client\" \"npm run dev -w server\"",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "npm run dev -w server",
+    "dev:frontend": "npm run dev -w client",
+    "dev:backend": "npm run dev -w server",
+    "dev:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-dev.ps1",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "db:schema": "node server/db/run-sql.js schema",
+    "db:seed": "node server/db/run-sql.js seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
