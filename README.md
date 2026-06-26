@@ -23,20 +23,6 @@ DailyWell Tracker is a full-stack, mobile-first wellness tracking MVP. It helps 
 - Auth: JSON Web Tokens, bcrypt password hashing
 - Tooling: npm workspaces, concurrently, nodemon
 
-## Monorepo Structure
-
-```text
-client/
-  src/
-    api/
-    components/
-    pages/
-server/
-  controllers/
-  routes/
-  middleware/
-  db/
-```
 
 ## Database Schema
 
